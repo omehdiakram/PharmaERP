@@ -1,9 +1,11 @@
 <div class="dashboard-container">
   <nav class="dashboard-sidebar">
+    
     <div class="sidebar-header">
       <h1>PharmaERP HMIMV</h1>
       <img src="assets/logo.png" alt="Logo" class="logo" />
     </div>
+    
     <ul class="sidebar-menu">
       <li><a routerLink="/marches"><i class="fas fa-chart-line"></i> Marchés & BL</a></li>
       <li><a routerLink="/gestion-entre"><i class="fas fa-inbox"></i> Entrées</a></li>
@@ -12,10 +14,21 @@
       <li><a routerLink="/exploitation"><i class="fas fa-cogs"></i> Exploitation</a></li>
       <li><a routerLink="/configuration"><i class="fas fa-cogs"></i> Configuration</a></li>
       <li><a routerLink="/administration"><i class="fas fa-tools"></i> Administration</a></li>
+      <!-- To be added soon!  -->
+      <li><a routerLink="/"><i class="fas fa-tools"></i> Audit</a></li>
     </ul>
-    
-    
+
+    <div class="profile-section">
+      <img src="assets/informaticien.avif" alt="User Profile" class="profile-photo" />
+      <div class="profile-info">
+          <h3>Akram</h3>
+          <p>Informaticien</p> <!-- Change this dynamically based on user type -->
+      </div>
+  </div>
   </nav>
+  
+  
+
   <div class="dashboard-content">
     <router-outlet></router-outlet> <!-- Content will load here -->
   </div>
