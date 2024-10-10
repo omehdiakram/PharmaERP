@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';  // Import CommonModule
 import { RouterModule } from '@angular/router';  // Import RouterModule
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,4 +12,13 @@ import { RouterModule } from '@angular/router';  // Import RouterModule
 })
 export class DashboardComponent {
   // Your component logic can go here if needed
+  constructor(private router: Router) {}
+
+  logout() {
+    // Clear user session data if necessary
+    // For example: this.authService.logout();
+
+    // Navigate to login page
+    this.router.navigate(['/']); // Adjust path if your login route is different
+  }
 }

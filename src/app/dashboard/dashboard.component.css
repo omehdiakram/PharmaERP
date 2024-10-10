@@ -116,30 +116,60 @@
 }
 
 .profile-section {
-  margin-top: auto; /* Push the profile section to the bottom */
+  margin-top: 20px; /* Space above the profile section */
   display: flex; /* Aligns items horizontally */
   align-items: center; /* Vertically centers items */
-  background-color: rgba(255, 255, 255, 0.8); /* Light background */
-  border-radius: 10px; /* Rounded corners */
-  padding: 10px; /* Space around the content */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque background */
+  border-radius: 12px; /* Increased rounded corners for a softer look */
+  padding: 10px; /* Increased padding for a more spacious feel */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* More noticeable shadow */
+  font-size: 14px; /* Font size for the profile text */
+  flex-direction: column; /* Stack items vertically for centering */
+  align-items: center; /* Center items horizontally */
 }
 
 .profile-photo {
   width: 50px; /* Size of the profile photo */
   height: 50px; /* Size of the profile photo */
   border-radius: 50%; /* Makes the photo rounded */
-  margin-right: 15px; /* Space between photo and text */
+  margin-bottom: 10px; /* Space between photo and text */
+  border: 2px solid #00796B; /* Teal border for the photo */
+}
+
+.profile-info {
+  text-align: center; /* Center the text */
 }
 
 .profile-info h3 {
   margin: 0; /* Removes default margin */
-  font-size: 16px; /* Size of the name */
-  color: #004D40; /* Color for the name */
+  font-size: 16px; /* Font size for the name */
+  color: #004D40; /* Dark Green for the name */
 }
 
 .profile-info p {
   margin: 0; /* Removes default margin */
-  font-size: 14px; /* Size of the role */
-  color: #555; /* Color for the role */
+  font-size: 12px; /* Font size for the role */
+  color: #666; /* Gray for the role */
+}
+
+/* Logout Button */
+.logout-button {
+  background-color: #e74c3c; /* Red color for the button */
+  color: white; /* White text color */
+  padding: 6px 12px; /* Slightly larger padding */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 12px; /* Font size for the button */
+  margin-top: 10px; /* Space above the button */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.logout-button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.logout-button:focus {
+  outline: none; /* Remove outline on focus */
 }
