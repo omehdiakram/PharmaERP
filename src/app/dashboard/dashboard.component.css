@@ -1,0 +1,119 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh; /* Full height */
+  font-family: 'Arial', sans-serif; /* Clean font */
+}
+
+.dashboard-sidebar {
+  background: linear-gradient(135deg, #9c27b0, #6a1b9a); /* Stylish gradient background */
+  color: white;
+  width: 200px; /* Fixed width for sidebar */
+  padding: 30px; /* Increased padding */
+  position: sticky;
+  top: 0; /* Stick to the top */
+  overflow-y: auto; /* Scroll if content is too long */
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
+  border-radius: 0 10px 10px 0; /* Rounded corners on the right side */
+}
+
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar-header .logo {
+  width: 120px; /* Adjust logo size */
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  margin: 15px 0; /* Increased margin for spacing */
+}
+
+.sidebar-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 15px; /* More padding for clickable area */
+  display: block; /* Makes the entire area clickable */
+  border-radius: 8px; /* More rounded corners */
+  transition: background 0.3s, transform 0.3s; /* Add transform transition */
+  position: relative; /* For pseudo-element */
+}
+
+.sidebar-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Lighten on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.sidebar-menu a.active {
+  background-color: rgba(255, 255, 255, 0.3); /* Active link highlight */
+  font-weight: bold; /* Bold text for active link */
+}
+
+/* Pseudo-element for the active state */
+.sidebar-menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 100%;
+  background-color: #f1c40f; /* Accent color */
+  border-radius: 0 0 8px 8px; /* Rounded corners at the bottom */
+  transform: scaleX(0); /* Start hidden */
+  transition: transform 0.3s; /* Smooth transition */
+}
+
+.sidebar-menu a:hover::after,
+.sidebar-menu a.active::after {
+  transform: scaleX(1); /* Show on hover or active */
+}
+
+.dashboard-content {
+  flex: 1; /* Take the remaining space */
+  padding: 20px; /* Increased padding */
+  background-color: #f3e5f5; /* Light background for content area */
+  overflow-y: auto; /* Allow scrolling if content is too long */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+  border-radius: 10px; /* Rounded corners */
+  display: flex;
+  flex-direction: column; /* Vertical layout */
+}
+
+.dashboard-content h2 {
+  margin-bottom: 20px; /* Space below section titles */
+  color: #6a1b9a; /* Title color */
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column; /* Stack vertically on small screens */
+  }
+  
+  .dashboard-sidebar {
+    width: 100%; /* Full width for sidebar */
+    height: auto; /* Auto height */
+    position: relative; /* Change position */
+    box-shadow: none; /* Remove shadow on mobile */
+  }
+}
+
+
+.sidebar-menu a {
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center items vertically */
+}
+
+.sidebar-menu a i {
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 18px; /* Size of the icons */
+}
+
+
