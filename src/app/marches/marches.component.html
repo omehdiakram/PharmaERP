@@ -1,0 +1,68 @@
+<div class="dashboard">
+  <header class="dashboard-header">
+      <nav class="menu">
+          <ul>
+              <li><a routerLink="marches">Exploration des Marchés</a></li>
+              <li><a routerLink="en-cours-marche">Marchés Actuels</a></li>
+              <li><a routerLink="nouveau-marche">Nouveau Marché</a></li>
+              <li><a routerLink="appel-offre-marche">Appels d'offres</a></li>
+          </ul>
+      </nav>
+  </header>
+  
+  <div class="dashboard-content">
+    <div class="march-container">
+        <h2>Exploration des Marchés</h2>
+        <form class="march-form">
+            <div class="form-group">
+                <label for="ref-marche">Référence :</label>
+                <input type="text" id="ref-marche" placeholder="Référence" />
+            </div>
+    
+            <div class="form-group">
+                <label for="fournisseur">Prestataire :</label>
+                <input type="text" id="fournisseur" placeholder="Prestataire" />
+            </div>
+    
+            <div class="form-group">
+                <label for="volume">Quantité :</label>
+                <input type="text" id="volume" placeholder="Quantité" />
+            </div>
+    
+            <div class="form-group date-group">
+                <label>Date de notification :</label>
+                <input type="date" />
+                <span>et</span>
+                <input type="date" />
+            </div>
+    
+            <div class="form-group date-group">
+                <label>Date d'exécution :</label>
+                <input type="date" />
+                <span>et</span>
+                <input type="date" />
+            </div>
+    
+            <div class="form-group">
+                <label for="situation">État :</label>
+                <select id="situation">
+                    <option value="en-cours">En cours</option>
+                    <option value="solde">Soldé</option>
+                    <option value="annule">Annulée</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="type-marche">Type :</label>
+                <select id="type-marche">
+                    <option value="select-type">Sélectionner le type</option>
+                    <option value="type1">Type 1</option>
+                    <option value="type2">Type 2</option>
+                </select>
+            </div>
+    
+            <button type="button" class="submit-button">Recherche</button>
+        </form>
+    </div>
+</div>
+</div>

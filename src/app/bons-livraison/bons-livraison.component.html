@@ -1,0 +1,50 @@
+<div class="dashboard">
+  <header class="dashboard-header">
+    <nav class="menu">
+      <ul>
+        <li><a routerLink="marches">Exploration des Marchés</a></li>
+        <li><a routerLink="en-cours-marche">Marchés Actuels</a></li>
+        <li><a routerLink="nouveau-marche">Nouveau Marché</a></li>
+        <li><a routerLink="appel-offre-marche">Appels d'offres</a></li>
+        <li><a routerLink="marches/bl">Bons de Livraison</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="dashboard-content">
+    <div class="bon-livraison-container">
+      <h2>Liste des Bons de Livraison</h2>
+
+      <table class="bon-livraison-table">
+        <thead>
+          <tr>
+            <th>Référence</th>
+            <th>Marché</th>
+            <th>Date de Livraison</th>
+            <th>Observation</th>
+            <th>Actions</th> <!-- Nouvelle colonne pour les actions -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let bon of bonsLivraison">
+            <td>{{ bon.referenceBonLivraison }}</td>
+            <td>{{ bon.referenceMarche }}</td>
+            <td>{{ bon.dateLivraison | date:'shortDate' }}</td>
+            <td>{{ bon.observation }}</td>
+            <td>
+              <button class="action-button edit-button" title="Modifier">
+                <span class="material-icons">edit</span>
+              </button>
+              <button class="action-button delete-button" title="Supprimer">
+                <span class="material-icons">delete</span>
+              </button>
+            </td>
+          </tr>
+          <tr *ngIf="bonsLivraison.length === 0">
+            <td colspan="5" style="text-align: center;">Aucun bon de livraison trouvé.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

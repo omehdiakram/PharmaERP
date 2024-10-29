@@ -1,0 +1,128 @@
+/* Dashboard Container */
+.dashboard {
+    background-color: #E0F7E9; /* Light Green background for the dashboard */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    padding: 20px; /* Add padding to the header */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+/* Menu Styles */
+.menu {
+    display: flex; /* Use flexbox to align items */
+    justify-content: center; /* Center the menu items horizontally */
+    margin-bottom: 30px; /* Space below the menu */
+    width: 100%; /* Full width for the menu */
+}
+
+.menu ul {
+    list-style-type: none; /* Remove bullet points */
+    display: flex; /* Align items in a row */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.menu li {
+    margin: 0 20px; /* Space between menu items */
+}
+
+.menu a {
+    text-decoration: none; /* Remove underline */
+    color: #004D40; /* Dark Green for links */
+    font-weight: bold;
+    padding: 10px 15px; /* Add padding around links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background 0.3s, color 0.3s; /* Smooth background and color transition */
+}
+
+.menu a:hover {
+    background-color: rgba(0, 121, 107, 0.2); /* Lighten background on hover with Teal */
+}
+
+/* Bon Livraison Container */
+.bon-livraison-container {
+    background-color: #B2EBF2; /* Light Teal background */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px; /* Max width for the container */
+    margin: 20px auto; /* Center the form */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bon-livraison-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #004D40; /* Dark Green for heading */
+}
+
+/* Table Styles */
+.bon-livraison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px; /* Rounded corners for the table */
+    overflow: hidden; /* Clip the corners of the table */
+}
+
+.bon-livraison-table thead {
+    background-color: #004D40; /* Dark Green for header background */
+    color: white; /* White text for header */
+}
+
+.bon-livraison-table th,
+.bon-livraison-table td {
+    border: 1px solid #ccc;
+    padding: 15px; /* Increased padding for better spacing */
+    text-align: left;
+}
+
+/* Row Styles */
+.bon-livraison-table tbody tr {
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.bon-livraison-table tbody tr:nth-child(even) {
+    background-color: #E0F7E9; /* Light Green for even rows */
+}
+
+.bon-livraison-table tbody tr:hover {
+    background-color: rgba(0, 121, 107, 0.2); /* Teal hover effect */
+}
+
+/* Actions Button Styles */
+.action-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 5px;
+    transition: transform 0.3s;
+}
+
+.action-button:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+/* Icons */
+.material-icons {
+    font-size: 20px; /* Adjust icon size */
+    color: #004D40; /* Dark Green for icons */
+}
+
+/* No Data Message */
+.bon-livraison-table td {
+    text-align: center; /* Center align for all cells */
+}
+
+/* Style for Empty State */
+.bon-livraison-table tr.empty-state {
+    background-color: #f9f9f9; /* Light grey for no data message */
+    color: #757575; /* Grey text for no data */
+    font-style: italic; /* Italics for no data message */
+}

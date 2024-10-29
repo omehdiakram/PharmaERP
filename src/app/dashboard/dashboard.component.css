@@ -1,0 +1,200 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh; /* Full height */
+  font-family: 'Arial', sans-serif; /* Clean font */
+}
+
+.dashboard-sidebar {
+  background: #004D40; /* Dark Green for sidebar */
+  color: white;
+  width: 200px; /* Fixed width for sidebar */
+  padding: 30px; /* Increased padding */
+  position: sticky;
+  top: 0; /* Stick to the top */
+  overflow-y: auto; /* Scroll if content is too long */
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
+  border-radius: 0 10px 10px 0; /* Rounded corners on the right side */
+}
+
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar-header .logo {
+  width: 120px; /* Adjust logo size */
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  margin: 15px 0; /* Increased margin for spacing */
+}
+
+.sidebar-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 15px; /* More padding for clickable area */
+  display: block; /* Makes the entire area clickable */
+  border-radius: 8px; /* More rounded corners */
+  transition: background 0.3s, transform 0.3s; /* Add transform transition */
+  position: relative; /* For pseudo-element */
+}
+
+.sidebar-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Lighten on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.sidebar-menu a.active {
+  background-color: rgba(255, 255, 255, 0.3); /* Active link highlight */
+  font-weight: bold; /* Bold text for active link */
+}
+
+/* Pseudo-element for the active state */
+.sidebar-menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 100%;
+  background-color: #00796B; /* Teal accent color */
+  border-radius: 0 0 8px 8px; /* Rounded corners at the bottom */
+  transform: scaleX(0); /* Start hidden */
+  transition: transform 0.3s; /* Smooth transition */
+}
+
+.sidebar-menu a:hover::after,
+.sidebar-menu a.active::after {
+  transform: scaleX(1); /* Show on hover or active */
+}
+
+.dashboard-content {
+  flex: 1; /* Take the remaining space */
+  padding: 20px; /* Increased padding */
+  background-color: #E0F7E9; /* Light Green for content area */
+  overflow-y: auto; /* Allow scrolling if content is too long */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+  border-radius: 10px; /* Rounded corners */
+  display: flex;
+  flex-direction: column; /* Vertical layout */
+}
+
+.dashboard-content h2 {
+  margin-bottom: 20px; /* Space below section titles */
+  color: #004D40; /* Dark Green for titles */
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column; /* Stack vertically on small screens */
+  }
+
+  .dashboard-sidebar {
+    width: 100%; /* Full width for sidebar */
+    height: auto; /* Auto height */
+    position: relative; /* Change position */
+    box-shadow: none; /* Remove shadow on mobile */
+  }
+}
+
+.sidebar-menu a {
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center items vertically */
+}
+
+.sidebar-menu a i {
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 18px; /* Size of the icons */
+}
+
+.profile-section {
+  margin-top: 20px; /* Space above the profile section */
+  display: flex; /* Aligns items horizontally */
+  align-items: center; /* Vertically centers items */
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque background */
+  border-radius: 12px; /* Increased rounded corners for a softer look */
+  padding: 10px; /* Increased padding for a more spacious feel */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* More noticeable shadow */
+  font-size: 14px; /* Font size for the profile text */
+  flex-direction: column; /* Stack items vertically for centering */
+  align-items: center; /* Center items horizontally */
+}
+
+.profile-photo {
+  width: 50px; /* Size of the profile photo */
+  height: 50px; /* Size of the profile photo */
+  border-radius: 50%; /* Makes the photo rounded */
+  margin-bottom: 10px; /* Space between photo and text */
+  border: 2px solid #00796B; /* Teal border for the photo */
+}
+
+.profile-info {
+  text-align: center; /* Center the text */
+}
+
+.profile-info h3 {
+  margin: 0; /* Removes default margin */
+  font-size: 16px; /* Font size for the name */
+  color: #004D40; /* Dark Green for the name */
+}
+
+.profile-info p {
+  margin: 0; /* Removes default margin */
+  font-size: 12px; /* Font size for the role */
+  color: #666; /* Gray for the role */
+}
+
+/* Logout Button */
+.logout-button {
+  background-color: #e74c3c; /* Red color for the button */
+  color: white; /* White text color */
+  padding: 6px 12px; /* Slightly larger padding */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 12px; /* Font size for the button */
+  margin-top: 10px; /* Space above the button */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.logout-button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.logout-button:focus {
+  outline: none; /* Remove outline on focus */
+}
+
+/* Styles pour le sous-menu */
+.sidebar-menu .sub-menu {
+  list-style-type: none; /* Supprime les puces */
+  padding-left: 20px; /* Décale légèrement à droite le sous-menu */
+  margin-top: 8px; /* Espacement au-dessus du sous-menu */
+  font-size: 14px; /* Taille de police réduite pour le sous-menu */
+}
+
+.sidebar-menu .sub-menu li {
+  margin: 5px 0; /* Espacement vertical entre les éléments du sous-menu */
+}
+
+.sidebar-menu .sub-menu a {
+  color: #d1d1d1; /* Couleur plus claire pour les liens du sous-menu */
+  text-decoration: none;
+  padding: 8px 10px; /* Moins de padding pour une taille plus compacte */
+  display: block;
+  border-radius: 5px; /* Arrondit les coins du sous-menu */
+  font-size: 13px; /* Ajuste la taille de police */
+}
+
+.sidebar-menu .sub-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Légère surbrillance au survol */
+}

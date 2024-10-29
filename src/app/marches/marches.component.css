@@ -1,0 +1,142 @@
+/* Dashboard Container */
+.dashboard {
+  background-color: #E0F7E9; /* Light Green background for the dashboard */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  padding: 20px; /* Add padding to the header */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+/* Logo */
+.logo {
+  height: 50px; /* Adjust logo size as needed */
+  margin-bottom: 10px; /* Space below the logo */
+}
+
+/* Menu Styles */
+.menu {
+  display: flex; /* Use flexbox to align items */
+  justify-content: center; /* Center the menu items horizontally */
+  margin-bottom: 30px; /* Space below the menu */
+  width: 100%; /* Full width for the menu */
+}
+
+.menu ul {
+  list-style-type: none; /* Remove bullet points */
+  display: flex; /* Align items in a row */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.menu li {
+  margin: 0 20px; /* Space between menu items */
+}
+
+.menu a {
+  text-decoration: none; /* Remove underline */
+  color: #004D40; /* Dark Green for links */
+  font-weight: bold;
+  padding: 10px 15px; /* Add padding around links */
+  border-radius: 5px; /* Rounded corners */
+  transition: background 0.3s, color 0.3s; /* Smooth background and color transition */
+}
+
+.menu a:hover {
+  background-color: rgba(0, 121, 107, 0.2); /* Lighten background on hover with Teal */
+}
+
+.menu a.active {
+  color: white; /* Change text color for active link */
+}
+
+/* March Container */
+.march-container {
+  background-color: #B2EBF2; /* Light Teal background */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px; /* Max width for the form */
+  margin: 20px auto; /* Center the form */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.march-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #004D40; /* Dark Green for heading */
+}
+
+/* Form Styles */
+.march-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  color: #212121; /* Dark Gray for labels */
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input[type="date"] {
+  width: calc(50% - 10px); /* Adjust for spacing */
+  display: inline-block;
+}
+
+.date-group {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center align items vertically */
+  margin-bottom: 15px; /* Add some space below the date groups */
+}
+
+.date-group label {
+  width: 150px; /* Fixed width for labels to align correctly */
+  margin-right: 10px; /* Space between label and inputs */
+}
+
+.date-group input[type="date"] {
+  width: calc(50% - 10px); /* Adjust for spacing */
+}
+
+.date-group span {
+  margin: 0 10px; /* Space around the 'et' */
+}
+
+/* Submit Button */
+.submit-button {
+  padding: 10px;
+  background-color: #00796B; /* Teal button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #004D40; /* Dark Green on hover */
+}
+
+.submit-button:focus {
+  outline: none; /* Remove outline on focus */
+}

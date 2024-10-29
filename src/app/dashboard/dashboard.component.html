@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/8z7+WxfE3M5eV6q4Ra2EpcD2E6G2nU1ZfpmRYL8" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+<div class="dashboard-container">
+  <nav class="dashboard-sidebar">
+    
+    <div class="sidebar-header">
+      <h1>PharmaERP HMIMV</h1>
+      <img src="assets/logo.png" alt="Logo" class="logo" />
+    </div>
+    
+    <ul class="sidebar-menu">
+      <li><a routerLink="/marches" (click)="toggleBLSubMenu()"><i class="fas fa-chart-line"></i> Marchés & BL</a>
+        <ul *ngIf="showBLSubMenu" class="sub-menu">
+          <li><a routerLink="/marches/show"><i class="fas fa-plus"></i>Marchés</a></li>
+          <li><a routerLink="/marches/bl"><i class="fas fa-file-alt"></i> Bons de Livraison</a></li>
+        </ul>
+      </li>
+
+      <li><a routerLink="/gestion-entre"><i class="fas fa-inbox"></i> Entrées</a></li>
+      <li><a routerLink="/reapprovisionnement"><i class="fas fa-sync-alt"></i> Réapprovisionnement</a></li>
+      <li><a routerLink="/gestion-sorties"><i class="fas fa-sign-out-alt"></i> Sorties</a></li>
+      <li><a routerLink="/exploitation"><i class="fas fa-cogs"></i> Exploitation</a></li>
+      <li><a routerLink="/configuration"><i class="fas fa-cogs"></i> Configuration</a></li>
+      <li><a routerLink="/administration"><i class="fas fa-tools"></i> Administration</a></li>
+      <!-- To be added soon!  -->
+      <!-- <li><a routerLink="/"><i class="fas fa-tools"></i> Audit</a></li> -->
+    </ul>
+
+    <div class="profile-section">
+      <img src="assets/informaticien.avif" alt="User Profile" class="profile-photo" />
+      <div class="profile-info">
+          <h3>Akram</h3>
+          <p>Informaticien</p> <!-- Change this dynamically based on user type -->
+          <button class="logout-button"  (click)="logout()">Déconnexion</button> <!-- Logout button -->
+      </div>
+      
+  </div>
+  </nav>
+  
+  
+
+  <div class="dashboard-content">
+    <router-outlet></router-outlet> <!-- Content will load here -->
+  </div>
+</div>
